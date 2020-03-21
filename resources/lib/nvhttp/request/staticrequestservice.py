@@ -28,7 +28,7 @@ class StaticRequestService(AbstractRequestService):
         host.name = StaticRequestService.get_xml_string(server_info, 'hostname')
         host.uuid = StaticRequestService.get_xml_string(server_info, 'uniqueid')
         host.mac_address = StaticRequestService.get_xml_string(server_info, 'mac')
-        host.local_ip = StaticRequestService.get_xml_string(server_info, 'LocalIP')
+        host.local_ip = host_ip
         host.remote_ip = StaticRequestService.get_xml_string(server_info, 'ExternalIP')
         host.pair_state = int(StaticRequestService.get_xml_string(server_info, 'PairStatus'))
         host.gpu_type = StaticRequestService.get_xml_string(server_info, 'gputype')
